@@ -1,0 +1,32 @@
+Missing Values Filling Report
+==================================================
+
+Input file: dsi_2000_2020_final_structured_STD_CORRECTED.csv
+Output file: dsi_2000_2020_final_structured_STD_CORRECTED_FILLED_BY_STATION.csv
+Method: Station-specific filling (no mixing between stations)
+
+Filling Methods Used:
+- Linear interpolation + forward/backward fill for main flow metrics
+- Forward/backward fill for monthly data
+- Median fill for other numerical columns
+
+Total values filled: 543
+
+Filling Summary by Station:
+------------------------------
+D14A149: 379 values filled
+D14A144: 55 values filled
+D14A117: 43 values filled
+D14A146: 42 values filled
+D14A162: 16 values filled
+D22A093: 1 values filled
+D22A095: 1 values filled
+D22A105: 1 values filled
+D22A106: 1 values filled
+E22A054: 1 values filled
+E22A065: 1 values filled
+D14A011: 1 values filled
+D22A158: 1 values filled
+
+Stations with no missing values: 0
+Stations with missing values filled: 13
