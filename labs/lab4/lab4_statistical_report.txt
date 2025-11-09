@@ -1,0 +1,85 @@
+================================================================================
+LAB 4: STATISTICAL ANALYSIS REPORT
+Descriptive Statistics and Probability Distributions
+================================================================================
+
+1. CONCRETE STRENGTH ANALYSIS
+--------------------------------------------------------------------------------
+Sample Size: 100
+Mean: 35.06 MPa
+Median: 34.20 MPa
+Mode: 31.80 MPa
+Standard Deviation: 6.16 MPa
+Variance: 37.98 MPa²
+Range: 25.30 MPa
+IQR: 8.02 MPa
+Skewness: 0.047
+Kurtosis: -0.701
+
+Interpretation:
+- Distribution is approximately symmetric.
+- Distribution has lighter tails than normal (platykurtic).
+
+2. MATERIAL COMPARISON
+--------------------------------------------------------------------------------
+
+Steel:
+  Mean: 399.10 MPa
+  Std: 10.40 MPa
+  Min: 381.60 MPa
+  Max: 419.20 MPa
+
+Concrete:
+  Mean: 36.26 MPa
+  Std: 2.22 MPa
+  Min: 32.30 MPa
+  Max: 40.10 MPa
+
+Aluminum:
+  Mean: 196.63 MPa
+  Std: 7.63 MPa
+  Min: 186.20 MPa
+  Max: 212.40 MPa
+
+Composite:
+  Mean: 299.04 MPa
+  Std: 10.38 MPa
+  Min: 281.50 MPa
+  Max: 319.20 MPa
+
+3. PROBABILITY CALCULATIONS
+--------------------------------------------------------------------------------
+
+binomial:
+{3: {'exact': np.float64(0.1395756779308954), 'at_most': np.float64(0.2578386591160163), 'at_least': np.float64(0.8817370188148791)}, 5: {'exact': np.float64(0.18001782727042887), 'at_most': np.float64(0.6159991279561414), 'at_least': np.float64(0.5640186993142883)}, 'distribution': {'mean': 5.0, 'variance': 4.75, 'std': np.float64(2.179449471770337)}}
+
+poisson:
+{8: {'exact': np.float64(0.11259903214902009), 'at_most': np.float64(0.3328196787507191), 'more_than': np.float64(0.6671803212492808)}, 15: {'exact': np.float64(0.034718069630684245), 'at_most': np.float64(0.9512595966960213), 'more_than': np.float64(0.04874040330397866)}, 'distribution': {'mean': 10, 'variance': 10, 'std': np.float64(3.1622776601683795)}}
+
+normal:
+{'probability': np.float64(0.9772498680518208), 'description': 'P(X <= 280.00)', 'percentile_95': np.float64(274.6728044042721), 'mean': 250, 'std': 15}
+
+exponential:
+{500: {'before': np.float64(0.3934693402873666), 'after': np.float64(0.6065306597126334)}, 1500: {'before': np.float64(0.7768698398515702), 'after': np.float64(0.2231301601484298)}, 'distribution': {'mean': 1000, 'variance': 1000000, 'std': 1000}}
+
+4. BAYES' THEOREM APPLICATION
+--------------------------------------------------------------------------------
+Prior Probability: 0.050
+Sensitivity: 0.950
+Specificity: 0.900
+Posterior Probability: 0.333
+
+Engineering Implications:
+- The posterior probability indicates the likelihood of actual damage
+  given a positive test result, which is crucial for decision-making.
+
+5. DISTRIBUTION FITTING
+--------------------------------------------------------------------------------
+Fitted Mean: 35.06
+Fitted Std: 6.13
+Sample Mean: 35.06
+Sample Std: 6.16
+
+================================================================================
+END OF REPORT
+================================================================================
