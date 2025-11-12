@@ -1,6 +1,8 @@
 """
 Lab 4: Statistical Analysis
 Descriptive Statistics and Probability Distributions
+Student Name: İbrahim Çayir
+Student ID: 2020403207
 """
 
 import pandas as pd
@@ -29,6 +31,7 @@ def load_data(file_path):
         pandas.DataFrame: Loaded dataset
     """
     # Get the root directory (two levels up from labs/lab4/)
+    # Using pathlib keeps the script portable across different operating systems
     current_dir = Path(__file__).parent
     root_dir = current_dir.parent.parent
     datasets_dir = root_dir / 'datasets'
@@ -58,8 +61,10 @@ def calculate_descriptive_stats(data, column='strength_mpa'):
     Returns:
         dict: Dictionary containing all descriptive statistics
     """
+    # Remove missing values to avoid skewing the calculations
     values = data[column].dropna()
     
+    # Compute each statistic explicitly so the caller sees the exact fields available
     stats_dict = {
         'count': len(values),
         'mean': np.mean(values),
@@ -95,11 +100,15 @@ def plot_distribution(data, column, title, save_path=None):
     # ------------------------------------------------------------------
     # PREPARE CORE STATISTICS USED THROUGHOUT THE VISUALIZATION
     # ------------------------------------------------------------------
+    # Collect series of valid values for plotting and annotation
     values = data[column].dropna()
+    # Mean/median/mode provide central tendency markers
     mean_val = np.mean(values)
     median_val = np.median(values)
     mode_val = stats.mode(values, keepdims=True)[0][0]
+    # Sample standard deviation describes spread around the mean
     std_val = np.std(values, ddof=1)
+    # Reuse the helper to keep numeric callouts consistent with other sections
     summary_stats = calculate_descriptive_stats(data, column)
     
     fig, axes = plt.subplots(1, 2, figsize=(15, 6))
@@ -118,6 +127,7 @@ def plot_distribution(data, column, title, save_path=None):
     axes[0].axvline(mode_val, color='purple', linestyle='--', linewidth=2, label=f'Mode: {mode_val:.2f}')
     
     # Mark standard deviations
+    # Draw symmetrical reference lines for ±1σ, ±2σ, ±3σ around the mean
     for i, sigma in enumerate([1, 2, 3], 1):
         axes[0].axvline(mean_val + sigma * std_val, color='red', linestyle=':', alpha=0.5, linewidth=1)
         axes[0].axvline(mean_val - sigma * std_val, color='red', linestyle=':', alpha=0.5, linewidth=1)
@@ -187,6 +197,7 @@ def fit_distribution(data, column, distribution_type='normal'):
     Returns:
         tuple: Fitted distribution parameters and distribution object
     """
+    # Extract the observed values that will inform the fit
     values = data[column].dropna()
     
     if distribution_type == 'normal':
@@ -219,13 +230,17 @@ def calculate_probability_binomial(n, p, k):
     Returns:
         dict: Dictionary with probability results
     """
+    # Normalize single integer input to iterable for consistent processing
     if isinstance(k, (int, np.integer)):
         k = [k]
     
     results = {}
     for k_val in k:
+        # PMF gives exact probability of k successes in n trials
         prob_exact = binom.pmf(k_val, n, p)
+        # CDF covers cumulative probability up to k successes
         prob_at_most = binom.cdf(k_val, n, p)
+        # Complementary CDF finds probability of at least k successes
         prob_at_least = 1 - binom.cdf(k_val - 1, n, p)
         results[k_val] = {
             'exact': prob_exact,
@@ -258,18 +273,22 @@ def calculate_probability_normal(mean, std, x_lower=None, x_upper=None):
     Returns:
         dict: Probability results
     """
+    # Instantiate the normal distribution using the provided parameters
     dist = norm(loc=mean, scale=std)
     
     if x_lower is None and x_upper is None:
         raise ValueError("At least one bound must be specified")
     
     if x_lower is None:
+        # Probability mass below upper threshold
         prob = dist.cdf(x_upper)
         description = f"P(X <= {x_upper:.2f})"
     elif x_upper is None:
+        # Complementary probability above lower threshold
         prob = 1 - dist.cdf(x_lower)
         description = f"P(X >= {x_lower:.2f})"
     else:
+        # Probability of falling between both bounds
         prob = dist.cdf(x_upper) - dist.cdf(x_lower)
         description = f"P({x_lower:.2f} <= X <= {x_upper:.2f})"
     
@@ -300,8 +319,11 @@ def calculate_probability_poisson(lambda_param, k):
     
     results = {}
     for k_val in k:
+        # PMF: probability of exactly k events in fixed interval
         prob_exact = poisson.pmf(k_val, lambda_param)
+        # CDF: cumulative probability of up to k events
         prob_at_most = poisson.cdf(k_val, lambda_param)
+        # Complement of CDF yields probability of more than k events
         prob_more_than = 1 - poisson.cdf(k_val, lambda_param)
         results[k_val] = {
             'exact': prob_exact,
@@ -337,7 +359,9 @@ def calculate_probability_exponential(mean, x):
     
     results = {}
     for x_val in x:
+        # CDF gives probability that the event occurs before time x
         prob_before = dist.cdf(x_val)
+        # Survival function describes probability event occurs after time x
         prob_after = 1 - dist.cdf(x_val)
         results[x_val] = {
             'before': prob_before,
@@ -366,22 +390,27 @@ def apply_bayes_theorem(prior, sensitivity, specificity):
         dict: Results including posterior probability and probability tree
     """
     # Calculate probabilities
+    # Base rates for damage (disease) and no damage outcomes
     p_disease = prior
     p_no_disease = 1 - prior
     
     # Conditional probabilities
+    # Sensitivity describes true positive rate
     p_test_pos_given_disease = sensitivity
     p_test_neg_given_disease = 1 - sensitivity
+    # Specificity describes true negative rate
     p_test_neg_given_no_disease = specificity
     p_test_pos_given_no_disease = 1 - specificity
     
     # Joint probabilities
+    # Multiply base rates by conditional probabilities to get joint branches
     p_test_pos_and_disease = p_disease * p_test_pos_given_disease
     p_test_pos_and_no_disease = p_no_disease * p_test_pos_given_no_disease
     p_test_neg_and_disease = p_disease * p_test_neg_given_disease
     p_test_neg_and_no_disease = p_no_disease * p_test_neg_given_no_disease
     
     # Marginal probability of positive test
+    # Total probability rule sums the positive branches
     p_test_pos = p_test_pos_and_disease + p_test_pos_and_no_disease
     
     # Posterior probability using Bayes' theorem
@@ -422,6 +451,7 @@ def plot_material_comparison(data, column, group_column, save_path=None):
     # ------------------------------------------------------------------
     # PRE-COMPUTE GROUPED STATISTICS TO REUSE FOR BOTH SUBPLOTS
     # ------------------------------------------------------------------
+    # Pre-compute group-specific descriptive stats for annotations
     grouped_stats = {
         group: calculate_descriptive_stats(subset, column)
         for group, subset in data.groupby(group_column)
@@ -512,6 +542,7 @@ def plot_distribution_fitting(data, column, fitted_dist=None, save_path=None):
     # ------------------------------------------------------------------
     # PREPARE BOTH REAL AND SYNTHETIC DATASETS FOR VISUAL AND NUMERIC COMPARISON
     # ------------------------------------------------------------------
+    # Start from the cleaned original sample
     values = data[column].dropna()
     
     if fitted_dist is None:
@@ -520,6 +551,7 @@ def plot_distribution_fitting(data, column, fitted_dist=None, save_path=None):
         fitted_dist = norm(loc=mean_fit, scale=std_fit)
     
     # Generate synthetic data
+    # Draw the same number of samples so the comparison is apples-to-apples
     n_samples = len(values)
     synthetic_data = fitted_dist.rvs(size=n_samples)
     
@@ -588,6 +620,7 @@ def plot_probability_distributions(save_path=None):
     Args:
         save_path: str, optional path to save figure
     """
+    # Set up a 2x3 grid to showcase multiple distributions simultaneously
     fig, axes = plt.subplots(2, 3, figsize=(18, 12))
     
     # Binomial
@@ -816,6 +849,7 @@ def main():
     print("="*80 + "\n")
     
     # Store results for report
+    # Container used to accumulate outputs for the text report
     results_dict = {}
     
     # ============================================================================
