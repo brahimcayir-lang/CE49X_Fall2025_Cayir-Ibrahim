@@ -1,0 +1,8 @@
+# Exclude large PDF files that might cause indexing issues
+debi_raporlari/
+
+# Exclude generated charts if needed
+# charts/
+# station_charts/
+# nearest_stations/
+

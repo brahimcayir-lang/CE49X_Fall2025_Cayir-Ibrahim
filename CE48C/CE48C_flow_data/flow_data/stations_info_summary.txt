@@ -1,0 +1,95 @@
+STATIONS INFORMATION TABLE
+====================================================================================================
+
+Total number of stations: 17
+Observation period range: 2005-2020
+
+
+DETAILED STATION INFORMATION
+----------------------------------------------------------------------------------------------------
+
+1. D14A117 - ÇİLKORU D. GÖKDERE
+   Region: 14. Yesilirmak Havzasi
+   Coordinates: 36°43'56" Doğu - 40°29'21" Kuzey
+   Observation Period: 2005-2020
+
+2. D14A162 - YEŞİLIRMAK KOZLU
+   Region: 14. Yesilirmak Havzasi
+   Coordinates: 37°33'2" Doğu - 40°15'12" Kuzey
+   Observation Period: 2005-2020
+
+3. D14A185 - AKSU D. ARPAÖREN
+   Region: 14. Yesilirmak Havzasi
+   Coordinates: 36°59'31" Doğu - 40°30'29" Kuzey
+   Observation Period: 2014-2020
+
+4. D14A186 - ERYABA D. GÜRÇEŞME
+   Region: 14. Yesilirmak Havzasi
+   Coordinates: 36°48'56" Doğu - 40°33'52" Kuzey
+   Observation Period: 2017-2020
+
+5. D14A200 - YEŞİLIRMAK N. KIZILKÖY
+   Region: 14. Yesilirmak Havzasi
+   Coordinates: 36°40'46" Doğu - 40°22'38" Kuzey
+   Observation Period: 2019-2020
+
+6. D22A093 - TURNASUYU CUMHURİYET KÖYÜ
+   Region: 22. Dogu Karadeniz Havzasi
+   Coordinates: 37°57'40" Doğu - 40°49'50" Kuzey
+   Observation Period: 2005-2020
+
+7. D22A098 - AKSU D. SÜRMEN
+   Region: 22. Dogu Karadeniz Havzasi
+   Coordinates: 38°22'0" Doğu - 40°36'0" Kuzey
+   Observation Period: 2008-2020
+
+8. D22A105 - DEĞİRMEN D. SALIPAZARI
+   Region: 22. Dogu Karadeniz Havzasi
+   Coordinates: 36°49'19" Doğu - 41°4'24" Kuzey
+   Observation Period: 2005-2020
+
+9. D22A106 - BATLAMA D. ÇUKURKÖY
+   Region: 22. Dogu Karadeniz Havzasi
+   Coordinates: 38°18'30" Doğu - 40°50'36" Kuzey
+   Observation Period: 2005-2020
+
+10. E14A018 - YEŞİLIRMAK N. GÖMELEÖNÜ
+   Region: 14. Yesilirmak Havzasi
+   Coordinates: 37°7'43" Doğu - 40°18'42" Kuzey
+   Observation Period: 2012-2019
+
+11. E14A027 - KELKİT ÇAYI YEMİŞLI KÖPRÜSÜ
+   Region: 14. Yesilirmak Havzasi
+   Coordinates: 37°58'23" Doğu - 40°14'13" Kuzey
+   Observation Period: 2012-2020
+
+12. E22A053 - PAZARSUYU EMECAN
+   Region: 22. Dogu Karadeniz Havzasi
+   Coordinates: 38°10'32" Doğu - 40°55'37" Kuzey
+   Observation Period: 2013-2020
+
+13. E22A054 - AKÇAY DURAKLI
+   Region: 22. Dogu Karadeniz Havzasi
+   Coordinates: 37°8'50" Doğu - 41°6'38" Kuzey
+   Observation Period: 2012-2020
+
+14. E22A063 - TURNASUYU KAPÇULLU
+   Region: 22. Dogu Karadeniz Havzasi
+   Coordinates: 38°0'7" Doğu - 40°57'19" Kuzey
+   Observation Period: 2012-2020
+
+15. E22A065 - ELEKÇİ DERESİ BOZDAĞI
+   Region: 22. Dogu Karadeniz Havzasi
+   Coordinates: 37°26'10" Doğu - 40°59'18" Kuzey
+   Observation Period: 2012-2020
+
+16. E22A066 - CEVİZDERE DÜZKÖY
+   Region: 22. Dogu Karadeniz Havzasi
+   Coordinates: 37°18'18" Doğu - 41°3'37" Kuzey
+   Observation Period: 2012-2020
+
+17. E22A071 - CURA Ç. CURİ
+   Region: 22. Dogu Karadeniz Havzasi
+   Coordinates: 37°12'5" Doğu - 41°6'57" Kuzey
+   Observation Period: 2012-2020
+

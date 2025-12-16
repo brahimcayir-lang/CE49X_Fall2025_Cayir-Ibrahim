@@ -1,0 +1,34 @@
+Filled Values Rounding Report
+==================================================
+
+Original file: dsi_2000_2020_final_structured_STD_CORRECTED.csv
+Filled file: dsi_2000_2020_final_structured_STD_CORRECTED_FILLED_BY_STATION.csv
+Output file: dsi_2000_2020_final_structured_STD_CORRECTED_FILLED_BY_STATION_ROUNDED_FILLED_VALUES.csv
+Method: Round only filled values to 2 decimal places
+
+Rounding Summary:
+- Only values that were filled (missing in original) were rounded
+- Original extracted data remains unchanged
+- Filled values rounded to 2 decimal places
+
+Total filled values rounded: 543
+
+Rounding Summary by Station:
+------------------------------
+D14A149: 379 filled values rounded
+D14A144: 55 filled values rounded
+D14A117: 43 filled values rounded
+D14A146: 42 filled values rounded
+D14A162: 16 filled values rounded
+D22A093: 1 filled values rounded
+D22A095: 1 filled values rounded
+D22A105: 1 filled values rounded
+D22A106: 1 filled values rounded
+E22A054: 1 filled values rounded
+E22A065: 1 filled values rounded
+D14A011: 1 filled values rounded
+D22A158: 1 filled values rounded
+D14A018: 0 filled values rounded
+
+Stations with no filled values: 1
+Stations with filled values rounded: 13

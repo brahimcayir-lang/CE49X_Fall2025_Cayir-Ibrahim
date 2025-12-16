@@ -1,0 +1,3 @@
+# Exclude PDF folder that might be causing indexing issues
+debi_raporlari/
+
