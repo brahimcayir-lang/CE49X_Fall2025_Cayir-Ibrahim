@@ -1,0 +1,16 @@
+=== FINAL PROJECT CONCLUSION: AI MATURITY IN CIVIL ENGINEERING ===
+
+AI INTEREST RANKING (Based on Article Volume):
+            CE Discipline  Article Count  Percentage
+  Construction Management            527       70.27
+           Transportation             91       12.13
+               Structural             69        9.20
+Environmental Engineering             57        7.60
+             Geotechnical              6        0.80
+
+AI MATURITY INSIGHTS:
+1. Most Mature Discipline: Construction Management (Highest research volume).
+2. Most Tech-Diverse Discipline: Construction Management (Uses the widest variety of AI tools).
+
+INTERPRETATION:
+The data suggests that Construction Management is the leading area for AI integration, likely due to the abundance of image/sensor data available for Computer Vision and Predictive Analytics.

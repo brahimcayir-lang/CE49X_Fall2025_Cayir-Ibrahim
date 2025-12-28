@@ -1,0 +1,17 @@
+=== TASK 3: CATEGORY DISTRIBUTION ===
+
+CIVIL ENGINEERING AREAS (ce_topic):
+ce_topic
+Construction Management      527
+Transportation                91
+Structural                    69
+Environmental Engineering     57
+Geotechnical                   6
+
+AI TECHNOLOGIES (ai_topic):
+ai_topic
+Machine Learning (General)    323
+Robotics/Automation           172
+Computer Vision                98
+Predictive Analytics           98
+Generative Design              59

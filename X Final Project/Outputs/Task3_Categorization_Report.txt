@@ -1,0 +1,28 @@
+==================================================
+CE49X TASK 3 REPORT - CATEGORIZATION
+==================================================
+
+1. CIVIL ENGINEERING AREA DISTRIBUTION
+----------------------------------------
+Construction Mgmt    1075
+Structural            628
+Transportation        618
+Environmental         465
+Geotechnical          350
+
+2. AI TECHNOLOGY DISTRIBUTION
+----------------------------------------
+Robotics & Automation         656
+Machine Learning (General)    597
+Predictive Analytics          386
+Computer Vision               289
+Generative Design             184
+
+3. CO-OCCURRENCE MATRIX (Raw Counts)
+----------------------------------------
+                   Computer Vision  Predictive Analytics  Generative Design  Robotics & Automation  Machine Learning (General)
+Structural                      98                   146                 87                    159                         171
+Geotechnical                    54                   100                 45                    124                         108
+Transportation                 113                   172                 85                    247                         138
+Construction Mgmt              160                   154                 70                    249                         126
+Environmental                   69                   127                 55                    167                         104

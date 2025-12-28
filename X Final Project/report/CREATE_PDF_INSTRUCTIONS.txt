@@ -1,0 +1,57 @@
+===============================================
+HOW TO CREATE PDF FROM FINAL_REPORT.HTML
+===============================================
+
+Method 1: Using Browser (EASIEST - Recommended)
+------------------------------------------------
+IMPORTANT: The HTML file now includes ALL visualizations (charts, graphs, word clouds, heatmaps) embedded directly in the document!
+
+1. Navigate to your project folder and double-click "Final_Report.html"
+   OR right-click and select "Open with" → Choose your browser (Chrome/Edge/Firefox)
+
+2. Once the HTML file opens in your browser:
+   - You should see all the images (bar chart, heatmap, network graph, word clouds, temporal trends)
+   - Press Ctrl+P (or Cmd+P on Mac)
+   
+3. In the print dialog:
+   - Select "Save as PDF" or "Microsoft Print to PDF" as the printer
+   - IMPORTANT: Make sure "More settings" → "Background graphics" is CHECKED (this ensures images print correctly)
+   - Set margins to "Default" or "Minimum"
+   - Click "Save"
+   
+4. Choose location and save as "Final_Report.pdf"
+
+That's it! The HTML includes all 9 visualization figures embedded and ready to print to PDF with proper formatting.
+
+===============================================
+
+Method 2: Using Pandoc (If Installed)
+--------------------------------------
+If you have pandoc installed:
+
+    pandoc Final_Report.md -o Final_Report.pdf --pdf-engine=xelatex --toc -V geometry:margin=1in
+
+Download pandoc from: https://pandoc.org/installing.html
+
+===============================================
+
+Method 3: VS Code Extension
+----------------------------
+1. Install VS Code extension: "Markdown PDF" by yzane
+2. Open Final_Report.md in VS Code
+3. Press Ctrl+Shift+P
+4. Type "Markdown PDF: Export (pdf)" and select it
+5. PDF will be generated in the same directory
+
+===============================================
+
+Method 4: Online Converter
+---------------------------
+1. Go to: https://www.markdowntopdf.com/
+2. Upload Final_Report.md
+3. Download the generated PDF
+
+===============================================
+
+The HTML file (Final_Report.html) is ready to use with Method 1!
+

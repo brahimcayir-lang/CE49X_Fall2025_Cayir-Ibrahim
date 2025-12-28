@@ -1,0 +1,67 @@
+==================================================
+CE49X TASK 2 REPORT - GENERATED ON 2025-12-27 20:38:28.492209
+==================================================
+
+🏆 TOP 20 MOST FREQUENT WORDS (CLEANED)
+----------------------------------------
+          Word  Frequency
+  construction       1880
+          data       1466
+         model        970
+        system        898
+       digital        848
+    technology        775
+      building        688
+        design        612
+infrastructure        543
+      learning        534
+          twin        517
+      industry        483
+       machine        462
+  intelligence        455
+      material        442
+        across        442
+          pthe        432
+           use        401
+        method        398
+           bim        395
+
+----------------------------------------
+
+🔗 TOP 20 BI-GRAMS (TWO-WORD PHRASES)
+----------------------------------------
+                 Bi-gram  Frequency
+            digital twin        481
+        machine learning        336
+ artificial intelligence        333
+             data center        181
+   construction industry        138
+       construction site        108
+           deep learning         70
+                 pro max         69
+             data centre         64
+       civil engineering         61
+          neural network         59
+         computer vision         59
+         twin technology         55
+             usd billion         54
+forwardlooking statement         54
+   building construction         53
+              smart city         52
+          learning model         51
+          language model         49
+          large language         47
+
+----------------------------------------
+
+🧮 TF-IDF EXAMPLE (FEATURE EXTRACTION)
+----------------------------------------
+Article: 'Toward Integrated Human-machine Intelligence for Civil Engin...'
+                tfidf
+civil        0.463406
+engineering  0.326506
+knowledge    0.290571
+gap          0.280753
+identified   0.240547
+
+==================================================

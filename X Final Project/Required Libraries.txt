@@ -1,0 +1,32 @@
+# Data Manipulation & Database
+pandas
+numpy
+
+# Web Scraping & APIs
+requests
+beautifulsoup4
+newspaper3k
+GoogleNews
+lxml
+feedparser
+pygooglenews
+
+# Natural Language Processing (NLP)
+nltk
+spacy
+textblob
+
+# Visualization
+matplotlib
+seaborn
+wordcloud
+networkx
+plotly
+kaleido
+streamlit
+
+# Utilities (Progress bars, etc.)
+tqdm
+
+# LLM Integration
+google-generativeai

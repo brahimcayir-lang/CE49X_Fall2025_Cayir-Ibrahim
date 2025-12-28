@@ -1,0 +1,67 @@
+==================================================
+CE49X TASK 2 REPORT - GENERATED ON 2025-12-27 20:19:16.566100
+==================================================
+
+🏆 TOP 20 MOST FREQUENT WORDS (CLEANED)
+----------------------------------------
+          Word  Frequency
+          data       1919
+  construction       1485
+         model        968
+        system        910
+    technology        836
+       digital        678
+infrastructure        673
+      building        626
+        design        571
+      industry        552
+        energy        539
+        center        535
+        across        452
+      solution        433
+  intelligence        417
+         power        408
+        method        396
+          cost        390
+           use        379
+          pthe        363
+
+----------------------------------------
+
+🔗 TOP 20 BI-GRAMS (TWO-WORD PHRASES)
+----------------------------------------
+                 Bi-gram  Frequency
+             data center        474
+            digital twin        301
+ artificial intelligence        272
+        machine learning        156
+   construction industry         97
+       construction site         91
+             data centre         86
+            united state         74
+          neural network         63
+             usd billion         60
+forwardlooking statement         58
+         carbon emission         56
+           deep learning         53
+         computer vision         47
+        renewable energy         45
+              smart city         44
+             real estate         43
+  digital transformation         43
+       civil engineering         42
+            supply chain         41
+
+----------------------------------------
+
+🧮 TF-IDF EXAMPLE (FEATURE EXTRACTION)
+----------------------------------------
+Article: '10 Construction Robotics Companies...'
+                 tfidf
+robotics      0.855519
+construction  0.266401
+company       0.248091
+advanced      0.190721
+develop       0.122982
+
+==================================================
