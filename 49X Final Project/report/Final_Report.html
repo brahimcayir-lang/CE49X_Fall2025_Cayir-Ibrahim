@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CE49X Final Project Report</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 2cm;
+        }
+        
+        @media print {
+            body {
+                margin: 0;
+                padding: 0;
+            }
+            
+            .page-break {
+                page-break-before: always;
+            }
+            
+            h1, h2, h3 {
+                page-break-after: avoid;
+            }
+            
+            table {
+                page-break-inside: avoid;
+            }
+        }
+        
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 11pt;
+            line-height: 1.6;
+            max-width: 210mm;
+            margin: 0 auto;
+            padding: 20mm;
+            color: #000;
+            background: #fff;
+        }
+        
+        h1 {
+            font-size: 20pt;
+            font-weight: bold;
+            margin-top: 20pt;
+            margin-bottom: 12pt;
+            color: #000;
+            border-bottom: 2pt solid #000;
+            padding-bottom: 5pt;
+        }
+        
+        h2 {
+            font-size: 16pt;
+            font-weight: bold;
+            margin-top: 16pt;
+            margin-bottom: 8pt;
+            color: #000;
+            border-bottom: 1pt solid #666;
+            padding-bottom: 3pt;
+        }
+        
+        h3 {
+            font-size: 14pt;
+            font-weight: bold;
+            margin-top: 12pt;
+            margin-bottom: 6pt;
+            color: #000;
+        }
+        
+        h4 {
+            font-size: 12pt;
+            font-weight: bold;
+            margin-top: 10pt;
+            margin-bottom: 5pt;
+        }
+        
+        p {
+            margin: 6pt 0;
+            text-align: justify;
+        }
+        
+        ul, ol {
+            margin: 8pt 0;
+            padding-left: 25pt;
+        }
+        
+        li {
+            margin: 4pt 0;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 12pt 0;
+            font-size: 10pt;
+        }
+        
+        th, td {
+            border: 1pt solid #000;
+            padding: 6pt;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #f0f0f0;
+            font-weight: bold;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        code {
+            background-color: #f5f5f5;
+            padding: 2pt 4pt;
+            border-radius: 3pt;
+            font-family: 'Courier New', monospace;
+            font-size: 10pt;
+        }
+        
+        pre {
+            background-color: #f5f5f5;
+            padding: 10pt;
+            border: 1pt solid #ddd;
+            border-radius: 4pt;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+            font-size: 9pt;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 12pt auto;
+            page-break-inside: avoid;
+            border: 1pt solid #ddd;
+        }
+        
+        .figure-caption {
+            text-align: center;
+            font-style: italic;
+            font-size: 10pt;
+            margin-top: 5pt;
+            margin-bottom: 15pt;
+            color: #333;
+        }
+        
+        blockquote {
+            border-left: 3pt solid #ccc;
+            margin: 10pt 0;
+            padding-left: 15pt;
+            font-style: italic;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1pt solid #000;
+            margin: 20pt 0;
+        }
+        
+        strong {
+            font-weight: bold;
+        }
+        
+        em {
+            font-style: italic;
+        }
+        
+        .toc {
+            background-color: #f9f9f9;
+            padding: 15pt;
+            margin: 20pt 0;
+            border: 1pt solid #ddd;
+        }
+        
+        .toc ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        .toc li {
+            margin: 5pt 0;
+        }
+        
+        .toc a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        
+        .toc a:hover {
+            text-decoration: underline;
+        }
+        
+        @media print {
+            a {
+                color: #000 !important;
+                text-decoration: none;
+            }
+        }
+        
+        .footer {
+            margin-top: 30pt;
+            padding-top: 10pt;
+            border-top: 1pt solid #ccc;
+            font-size: 9pt;
+            color: #666;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="ce49x-final-project">CE49X Final Project</h1>
+<h2 id="civil-engineering-ai-integration-analyzing-industry-trends-through-news-media">Civil Engineering &amp; AI Integration: Analyzing Industry Trends through News &amp; Media</h2>
+<p><strong>Repository:</strong> <a href="https://github.com/brahimcayir-lang/CE49X_Fall2025_Cayir-Ibrahim">https://github.com/brahimcayir-lang/CE49X_Fall2025_Cayir-Ibrahim</a></p>
+<p><strong>Boğaziçi University</strong><br />
+<strong>Fall 2025</strong><br />
+<strong>Dr. Eyuphan Koc</strong></p>
+<hr />
+<p><strong>Team Members:</strong>
+- Hakan ARMAN - 2020403
+- İbrahim ÇAYIR - 2020403207</p>
+<p><strong>Date:</strong> December 11, 2025</p>
+<hr />
+<h1 id="table-of-contents">Table of Contents</h1>
+<ol>
+<li><a href="#executive-summary">Executive Summary</a></li>
+<li><a href="#methodology">Methodology</a></li>
+<li><a href="#quantitative-results">Quantitative Results</a></li>
+<li><a href="#qualitative-insights">Qualitative Insights</a></li>
+<li><a href="#visualizations">Visualizations</a></li>
+<li><a href="#conclusion--future-outlook">Conclusion &amp; Future Outlook</a></li>
+<li><a href="#references">References</a></li>
+</ol>
+<hr />
+<h1 id="executive-summary">Executive Summary</h1>
+<p>This report presents a comprehensive analysis of Artificial Intelligence (AI) adoption across Civil Engineering sub-disciplines, based on the examination of 750 curated articles from industry news, academic publications, and technical blogs. The study employs Natural Language Processing (NLP) techniques and dictionary-based classification to quantify AI integration trends.</p>
+<h2 id="main-finding-which-area-uses-ai-most">Main Finding: Which Area Uses AI Most?</h2>
+<p><strong>Construction Management is the undisputed leader in AI adoption</strong>, representing <strong>70.27%</strong> (527 articles) of all AI-related content in Civil Engineering. This dominance reflects the discipline's focus on digital transformation, site monitoring, safety systems, and project optimization.</p>
+<h3 id="key-rankings-by-ai-maturity">Key Rankings by AI Maturity:</h3>
+<ol>
+<li><strong>Construction Management</strong>: 527 articles (70.27%)</li>
+<li><strong>Transportation</strong>: 91 articles (12.13%)</li>
+<li><strong>Structural Engineering</strong>: 69 articles (9.20%)</li>
+<li><strong>Environmental Engineering</strong>: 57 articles (7.60%)</li>
+<li><strong>Geotechnical Engineering</strong>: 6 articles (0.80%)</li>
+</ol>
+<p>The analysis reveals that <strong>Computer Vision and Predictive Analytics</strong> are the most frequently deployed AI technologies in construction safety and site monitoring applications, driving Construction Management's leadership position. Transportation follows as a strong second, primarily driven by autonomous vehicle infrastructure and smart highway systems.</p>
+<hr />
+<h1 id="methodology">Methodology</h1>
+<h2 id="21-data-collection-strategy">2.1 Data Collection Strategy</h2>
+<p>Our data collection employed a multi-source, multi-method approach to ensure comprehensive coverage of both industry practice and academic research:</p>
+<h3 id="data-sources">Data Sources:</h3>
+<p><strong>1. RSS Feeds (Primary Source):</strong>
+- <strong>Industry News Portals</strong>: Engineering News-Record (ENR), Construction Dive, BIMplus, New Civil Engineer, Civil + Structural Engineer Media
+- <strong>Technology-Focused Feeds</strong>: AEC Magazine, Stack Construction Tech, PlanGrid/Autodesk Blog
+- <strong>Google News RSS</strong>: Custom queries combining Civil Engineering and AI terms
+- <strong>Professional Blogs</strong>: Trimble, Autodesk, Bentley Systems, Revit-related feeds</p>
+<p><strong>2. Scientific Publications:</strong>
+- <strong>arXiv API</strong>: 200 academic papers from computer science categories (cs.AI, cs.CV, cs.LG) with Civil Engineering applications
+- Focus on: structural health monitoring, digital twins, computer vision, predictive maintenance</p>
+<p><strong>3. Web Scraping &amp; APIs:</strong>
+- <strong>Google News Aggregator</strong>: Python library for targeted searches
+- <strong>Newspaper3k</strong>: Automated article text extraction
+- Combined keyword searches (50+ unique query combinations)</p>
+<h3 id="search-query-strategy">Search Query Strategy:</h3>
+<p>We systematically combined Civil Engineering terms with AI technologies:</p>
+<p><strong>CE Terms:</strong> Construction, Structural, Geotechnical, Transportation, Infrastructure, Concrete, Bridge, Tunnel</p>
+<p><strong>AI Terms:</strong> Artificial Intelligence, Machine Learning, Computer Vision, Generative AI, Neural Networks, Robotics, Automation, Predictive Analytics</p>
+<p><strong>Example Queries:</strong>
+- "Construction Management Artificial Intelligence"
+- "Computer Vision Construction Safety"
+- "Structural Health Monitoring Machine Learning"
+- "BIM Digital Twins AI Integration"
+- "Geotechnical Engineering Machine Learning"</p>
+<h3 id="data-validation">Data Validation:</h3>
+<ul>
+<li><strong>Relevance Filtering</strong>: Each article required mentions of both CE and AI terms</li>
+<li><strong>Quality Control</strong>: Minimum 200-character length requirement</li>
+<li><strong>Deduplication</strong>: URL-based uniqueness checking</li>
+<li><strong>Final Collection</strong>: 750 validated articles after cleaning</li>
+</ul>
+<h3 id="data-storage">Data Storage:</h3>
+<p>All articles stored in <strong>SQLite database</strong> (<code>corpus.db</code>) with the following schema:
+- Title
+- Publication Date
+- Source/Publisher
+- URL
+- Full Text Content
+- Search Keywords Used
+- Category Tag (RSS/Blog/Scientific)</p>
+<hr />
+<h2 id="22-text-preprocessing-pipeline">2.2 Text Preprocessing Pipeline</h2>
+<p>We implemented a comprehensive NLP preprocessing pipeline using <strong>NLTK</strong> (Natural Language Toolkit):</p>
+<h3 id="preprocessing-steps">Preprocessing Steps:</h3>
+<p><strong>1. Tokenization:</strong>
+- Sentence and word tokenization using NLTK's Punkt tokenizer
+- Preserved document structure while splitting into analyzable units</p>
+<p><strong>2. Normalization:</strong>
+- Converted all text to lowercase
+- Removed URLs using regex patterns
+- Removed HTML/XML artifacts (e.g., "href", "target", "class")
+- Removed punctuation and special characters
+- Eliminated scraper artifacts (e.g., "subscribe", "click here", "noreferrer")</p>
+<p><strong>3. Stopword Removal:</strong>
+- Standard English stopwords (NLTK corpus)
+- Domain-specific noise words:
+  - Generic: "said", "also", "would", "could", "using", "made"
+  - Web artifacts: "div", "span", "href", "http", "https", "url"
+  - Temporal: month names, "ago", "hour", "minute"</p>
+<p><strong>4. Lemmatization:</strong>
+- Applied WordNetLemmatizer to reduce words to root forms
+- Example: "buildings" → "building", "analyzing" → "analyze"
+- Ensured consistent frequency counts across morphological variations</p>
+<p><strong>5. Feature Extraction:</strong>
+- <strong>N-grams</strong>: Identified 2-word and 3-word phrases using CountVectorizer
+- <strong>TF-IDF</strong>: Calculated Term Frequency-Inverse Document Frequency scores
+- Used scikit-learn's TfidfVectorizer (max_features=1000) for document-specific keyword identification</p>
+<h3 id="advanced-cleaning-llm-assisted-refinement">Advanced Cleaning: LLM-Assisted Refinement</h3>
+<p>Beyond rule-based preprocessing, we employed <strong>Google Gemini 3 Flash API</strong> for semantic validation:
+- Relevance auditing to ensure CE+AI intersection
+- Semantic deduplication (identifying similar articles with different URLs)
+- Topic assignment validation
+- Removed ~20% of articles that failed relevance checks</p>
+<hr />
+<h2 id="23-categorization-classification">2.3 Categorization &amp; Classification</h2>
+<h3 id="dictionary-based-classification">Dictionary-Based Classification:</h3>
+<p>We developed comprehensive keyword dictionaries for both Civil Engineering areas and AI technologies:</p>
+<p><strong>Civil Engineering Areas:</strong></p>
+<ol>
+<li><strong>Structural Engineering:</strong></li>
+<li>
+<p>Keywords: structural, bridge, beam, column, slab, truss, seismic design, structural health monitoring (SHM), finite element, stress analysis, retrofit</p>
+</li>
+<li>
+<p><strong>Geotechnical Engineering:</strong></p>
+</li>
+<li>
+<p>Keywords: geotechnical, soil mechanics, foundation, piling, excavation, tunneling, TBM, slope stability, retaining wall, liquefaction</p>
+</li>
+<li>
+<p><strong>Transportation Engineering:</strong></p>
+</li>
+<li>
+<p>Keywords: transportation, traffic engineering, highway, pavement, roadway, railway, autonomous vehicle, logistics, airport, smart infrastructure</p>
+</li>
+<li>
+<p><strong>Construction Management:</strong></p>
+</li>
+<li>
+<p>Keywords: construction management, project management, scheduling, cost estimation, safety, OSHA, PPE, site monitoring, BIM, digital twin, lean construction</p>
+</li>
+<li>
+<p><strong>Environmental Engineering:</strong></p>
+</li>
+<li>Keywords: environmental engineering, sustainability, green building, LEED, carbon footprint, energy efficiency, wastewater, waste management, climate change</li>
+</ol>
+<p><strong>AI Technologies:</strong></p>
+<ol>
+<li><strong>Computer Vision:</strong></li>
+<li>
+<p>Keywords: computer vision, image recognition, drone, camera, video analysis, object detection, inspection</p>
+</li>
+<li>
+<p><strong>Predictive Analytics:</strong></p>
+</li>
+<li>
+<p>Keywords: predictive, prediction, forecasting, risk assessment, data analytics, regression, prognosis</p>
+</li>
+<li>
+<p><strong>Generative Design:</strong></p>
+</li>
+<li>
+<p>Keywords: generative design, optimization, parametric, topology, genetic algorithm</p>
+</li>
+<li>
+<p><strong>Robotics &amp; Automation:</strong></p>
+</li>
+<li>
+<p>Keywords: robot, automation, autonomous, machinery, 3D printing, unmanned</p>
+</li>
+<li>
+<p><strong>Machine Learning (General):</strong></p>
+</li>
+<li>Keywords: machine learning, neural network, deep learning, AI algorithm, training data</li>
+</ol>
+<h3 id="classification-logic">Classification Logic:</h3>
+<ul>
+<li>Each article scanned for keyword presence in both CE and AI dictionaries</li>
+<li>Articles tagged with one or more categories per domain</li>
+<li>Co-occurrence matrix generated to track CE-AI technology pairs</li>
+<li>Multi-label classification allowed (articles can span multiple categories)</li>
+</ul>
+<hr />
+<h1 id="quantitative-results">Quantitative Results</h1>
+<h2 id="31-dataset-statistics">3.1 Dataset Statistics</h2>
+<p><strong>Total Articles Analyzed:</strong> 750</p>
+<p><strong>Data Collection Breakdown:</strong>
+- RSS Feeds: ~3,000+ articles collected (filtered to 750 relevant)
+- Scientific Papers (arXiv): 200 papers
+- Google News Aggregator: Variable per query session
+- Final Validated Dataset: 750 articles meeting CE+AI criteria</p>
+<p><strong>Date Range:</strong> Articles collected over multiple collection sessions, spanning recent industry publications and academic papers</p>
+<hr />
+<h2 id="32-civil-engineering-area-distribution">3.2 Civil Engineering Area Distribution</h2>
+<table>
+<thead>
+<tr>
+<th>CE Discipline</th>
+<th>Article Count</th>
+<th>Percentage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Construction Management</td>
+<td>527</td>
+<td>70.27%</td>
+</tr>
+<tr>
+<td>Transportation</td>
+<td>91</td>
+<td>12.13%</td>
+</tr>
+<tr>
+<td>Structural</td>
+<td>69</td>
+<td>9.20%</td>
+</tr>
+<tr>
+<td>Environmental Engineering</td>
+<td>57</td>
+<td>7.60%</td>
+</tr>
+<tr>
+<td>Geotechnical</td>
+<td>6</td>
+<td>0.80%</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td><strong>750</strong></td>
+<td><strong>100%</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Key Observations:</strong>
+- Construction Management dominates with over 2/3 of all content
+- Significant gap between Construction Management and second-place Transportation
+- Geotechnical Engineering shows minimal AI coverage (only 6 articles)</p>
+<hr />
+<h2 id="33-ai-technology-distribution">3.3 AI Technology Distribution</h2>
+<table>
+<thead>
+<tr>
+<th>AI Technology</th>
+<th>Article Count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Machine Learning (General)</td>
+<td>323</td>
+</tr>
+<tr>
+<td>Robotics/Automation</td>
+<td>172</td>
+</tr>
+<tr>
+<td>Computer Vision</td>
+<td>98</td>
+</tr>
+<tr>
+<td>Predictive Analytics</td>
+<td>98</td>
+</tr>
+<tr>
+<td>Generative Design</td>
+<td>59</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Key Observations:</strong>
+- Machine Learning (general) is the most cited technology (323 mentions)
+- Robotics/Automation is second, reflecting industry automation trends
+- Computer Vision and Predictive Analytics tied at 98 mentions each
+- Generative Design, while innovative, has lower adoption rates</p>
+<p><strong>Note:</strong> Articles can be tagged with multiple AI technologies, so counts are not mutually exclusive.</p>
+<hr />
+<h2 id="34-text-analysis-top-terms">3.4 Text Analysis: Top Terms</h2>
+<h3 id="top-20-most-frequent-words-after-cleaning">Top 20 Most Frequent Words (After Cleaning):</h3>
+<table>
+<thead>
+<tr>
+<th>Rank</th>
+<th>Word</th>
+<th>Frequency</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>data</td>
+<td>1,919</td>
+</tr>
+<tr>
+<td>2</td>
+<td>construction</td>
+<td>1,485</td>
+</tr>
+<tr>
+<td>3</td>
+<td>model</td>
+<td>968</td>
+</tr>
+<tr>
+<td>4</td>
+<td>system</td>
+<td>910</td>
+</tr>
+<tr>
+<td>5</td>
+<td>technology</td>
+<td>836</td>
+</tr>
+<tr>
+<td>6</td>
+<td>digital</td>
+<td>678</td>
+</tr>
+<tr>
+<td>7</td>
+<td>infrastructure</td>
+<td>673</td>
+</tr>
+<tr>
+<td>8</td>
+<td>building</td>
+<td>626</td>
+</tr>
+<tr>
+<td>9</td>
+<td>design</td>
+<td>571</td>
+</tr>
+<tr>
+<td>10</td>
+<td>industry</td>
+<td>552</td>
+</tr>
+<tr>
+<td>11</td>
+<td>energy</td>
+<td>539</td>
+</tr>
+<tr>
+<td>12</td>
+<td>center</td>
+<td>535</td>
+</tr>
+<tr>
+<td>13</td>
+<td>intelligence</td>
+<td>417</td>
+</tr>
+<tr>
+<td>14</td>
+<td>power</td>
+<td>408</td>
+</tr>
+<tr>
+<td>15</td>
+<td>method</td>
+<td>396</td>
+</tr>
+<tr>
+<td>16</td>
+<td>cost</td>
+<td>390</td>
+</tr>
+<tr>
+<td>17</td>
+<td>solution</td>
+<td>433</td>
+</tr>
+<tr>
+<td>18</td>
+<td>use</td>
+<td>379</td>
+</tr>
+<tr>
+<td>19</td>
+<td>across</td>
+<td>452</td>
+</tr>
+<tr>
+<td>20</td>
+<td>pthe</td>
+<td>363</td>
+</tr>
+</tbody>
+</table>
+<h3 id="top-20-bi-grams-two-word-phrases">Top 20 Bi-grams (Two-Word Phrases):</h3>
+<table>
+<thead>
+<tr>
+<th>Rank</th>
+<th>Bi-gram</th>
+<th>Frequency</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>data center</td>
+<td>474</td>
+</tr>
+<tr>
+<td>2</td>
+<td>digital twin</td>
+<td>301</td>
+</tr>
+<tr>
+<td>3</td>
+<td>artificial intelligence</td>
+<td>272</td>
+</tr>
+<tr>
+<td>4</td>
+<td>machine learning</td>
+<td>156</td>
+</tr>
+<tr>
+<td>5</td>
+<td>construction industry</td>
+<td>97</td>
+</tr>
+<tr>
+<td>6</td>
+<td>construction site</td>
+<td>91</td>
+</tr>
+<tr>
+<td>7</td>
+<td>data centre</td>
+<td>86</td>
+</tr>
+<tr>
+<td>8</td>
+<td>neural network</td>
+<td>63</td>
+</tr>
+<tr>
+<td>9</td>
+<td>carbon emission</td>
+<td>56</td>
+</tr>
+<tr>
+<td>10</td>
+<td>deep learning</td>
+<td>53</td>
+</tr>
+<tr>
+<td>11</td>
+<td>computer vision</td>
+<td>47</td>
+</tr>
+<tr>
+<td>12</td>
+<td>renewable energy</td>
+<td>45</td>
+</tr>
+<tr>
+<td>13</td>
+<td>smart city</td>
+<td>44</td>
+</tr>
+<tr>
+<td>14</td>
+<td>real estate</td>
+<td>43</td>
+</tr>
+<tr>
+<td>15</td>
+<td>digital transformation</td>
+<td>43</td>
+</tr>
+<tr>
+<td>16</td>
+<td>civil engineering</td>
+<td>42</td>
+</tr>
+<tr>
+<td>17</td>
+<td>supply chain</td>
+<td>41</td>
+</tr>
+<tr>
+<td>18</td>
+<td>united state</td>
+<td>74</td>
+</tr>
+<tr>
+<td>19</td>
+<td>usd billion</td>
+<td>60</td>
+</tr>
+<tr>
+<td>20</td>
+<td>forwardlooking statement</td>
+<td>58</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Key Insights:</strong>
+- "Digital twin" (301 mentions) highlights the importance of virtual modeling
+- "Artificial intelligence" and "machine learning" appear frequently
+- "Data center" dominance may reflect infrastructure focus in tech news
+- "Construction site" and "construction industry" confirm Construction Management's prominence</p>
+<hr />
+<h2 id="35-co-occurrence-matrix-ce-areas-ai-technologies">3.5 Co-occurrence Matrix: CE Areas × AI Technologies</h2>
+<p>The heatmap visualization (see Section 5.3) shows how often specific Civil Engineering areas co-occur with specific AI technologies. Key patterns:</p>
+<p><strong>Strong Pairings:</strong>
+- <strong>Construction Management × Computer Vision</strong>: High frequency (site monitoring, safety detection)
+- <strong>Construction Management × Predictive Analytics</strong>: Strong pairing (risk assessment, cost prediction)
+- <strong>Transportation × Robotics/Automation</strong>: Autonomous vehicles, smart infrastructure
+- <strong>Structural × Machine Learning</strong>: Structural health monitoring applications</p>
+<p><strong>Weak Pairings:</strong>
+- Geotechnical × any AI technology: Consistently low (only 6 articles total)
+- Environmental × Generative Design: Limited application</p>
+<hr />
+<h2 id="36-temporal-trends">3.6 Temporal Trends</h2>
+<p><img alt="Temporal Trends: CE Topics Over Time" src="../Outputs/AfterLLM/Task3_Temporal_Trends.png" /></p>
+<p><em>Figure 3.1: Temporal Trends - AI Mentions Across CE Disciplines Over Time</em></p>
+<p>Temporal analysis shows:
+- Increasing trend in AI mentions across all disciplines over time
+- Construction Management shows the steepest growth curve
+- Transportation demonstrates steady upward trajectory
+- Structural Engineering maintains consistent but lower volume</p>
+<p><em>Note: Temporal analysis limited by publication date availability in some sources.</em></p>
+<hr />
+<h1 id="qualitative-insights">Qualitative Insights</h1>
+<h2 id="41-why-construction-management-dominates">4.1 Why Construction Management Dominates</h2>
+<p>Construction Management's 70.27% share reflects several converging factors:</p>
+<h3 id="411-data-rich-environment">4.1.1 Data-Rich Environment</h3>
+<p>Construction sites generate massive amounts of data from:
+- <strong>IoT Sensors</strong>: Equipment monitoring, environmental conditions
+- <strong>Image/Video Streams</strong>: Security cameras, drone surveys, progress photos
+- <strong>Digital Tools</strong>: BIM models, project management software, scheduling systems</p>
+<p>This data abundance makes it a natural fit for AI, particularly <strong>Computer Vision</strong> and <strong>Predictive Analytics</strong>.</p>
+<h3 id="412-safety-compliance-pressures">4.1.2 Safety &amp; Compliance Pressures</h3>
+<p>Construction has one of the highest injury rates across industries. AI applications address critical safety needs:
+- <strong>Computer Vision for PPE Detection</strong>: Automated identification of workers without safety equipment
+- <strong>Accident Prediction</strong>: Machine learning models predicting hazardous conditions
+- <strong>Site Monitoring</strong>: Real-time analysis of construction activity for risk assessment</p>
+<p>These safety applications generate significant industry interest and media coverage.</p>
+<h3 id="413-economic-imperatives">4.1.3 Economic Imperatives</h3>
+<p>Construction projects face constant pressure to:
+- Reduce costs (AI-powered cost estimation)
+- Optimize scheduling (predictive scheduling algorithms)
+- Minimize delays (risk prediction models)</p>
+<p>AI's promise of improved efficiency drives investment and discussion in Construction Management.</p>
+<h3 id="414-digital-transformation-momentum">4.1.4 Digital Transformation Momentum</h3>
+<p>The industry's shift toward <strong>BIM (Building Information Modeling)</strong> and <strong>Digital Twins</strong> creates a digital foundation where AI integration is natural:
+- AI-powered clash detection in BIM
+- Automated compliance checking
+- Generative design for optimization</p>
+<hr />
+<h2 id="42-computer-vision-in-construction-safety">4.2 Computer Vision in Construction Safety</h2>
+<p>Computer Vision (98 mentions) is particularly prominent in Construction Management for safety applications:</p>
+<h3 id="dominant-applications">Dominant Applications:</h3>
+<ol>
+<li><strong>PPE Detection</strong>: Automated systems identifying workers without hard hats, safety vests, or other required equipment</li>
+<li><strong>Hazard Identification</strong>: AI systems detecting unsafe conditions (e.g., exposed electrical wires, unstable structures)</li>
+<li><strong>Worker Activity Monitoring</strong>: Tracking worker locations and activities for safety compliance</li>
+<li><strong>Equipment Monitoring</strong>: Identifying unsafe equipment operation</li>
+</ol>
+<h3 id="why-it-works">Why It Works:</h3>
+<ul>
+<li><strong>Image/Video Data Abundance</strong>: Construction sites are heavily monitored</li>
+<li><strong>Clear ROI</strong>: Safety improvements directly reduce liability and insurance costs</li>
+<li><strong>Regulatory Compliance</strong>: OSHA and similar agencies encourage technological safety solutions</li>
+<li><strong>Technology Maturity</strong>: Computer vision is a mature AI field with proven construction applications</li>
+</ul>
+<hr />
+<h2 id="43-transportation-the-autonomous-infrastructure-revolution">4.3 Transportation: The Autonomous Infrastructure Revolution</h2>
+<p>Transportation ranks second (12.13%) primarily due to:</p>
+<h3 id="431-autonomous-vehicle-infrastructure">4.3.1 Autonomous Vehicle Infrastructure</h3>
+<ul>
+<li><strong>Smart Highways</strong>: AI-powered traffic management systems</li>
+<li><strong>Connected Vehicles</strong>: V2X (vehicle-to-everything) communication infrastructure</li>
+<li><strong>Traffic Flow Optimization</strong>: Machine learning models optimizing signal timing and routing</li>
+</ul>
+<h3 id="432-bridge-roadway-inspection">4.3.2 Bridge &amp; Roadway Inspection</h3>
+<ul>
+<li><strong>Drone-Based Inspection</strong>: Computer vision for crack detection, damage assessment</li>
+<li><strong>Predictive Maintenance</strong>: AI models predicting infrastructure failure before it occurs</li>
+<li><strong>Automated Assessment</strong>: Reducing the need for manual inspection teams</li>
+</ul>
+<h3 id="433-public-transit-optimization">4.3.3 Public Transit Optimization</h3>
+<ul>
+<li><strong>Demand Prediction</strong>: Machine learning forecasting passenger demand</li>
+<li><strong>Route Optimization</strong>: AI systems optimizing transit routes and schedules</li>
+</ul>
+<hr />
+<h2 id="44-structural-engineering-digital-twins-and-shm">4.4 Structural Engineering: Digital Twins and SHM</h2>
+<p>Structural Engineering (9.20%) focuses heavily on:</p>
+<h3 id="441-structural-health-monitoring-shm">4.4.1 Structural Health Monitoring (SHM)</h3>
+<ul>
+<li><strong>Sensor Networks</strong>: IoT sensors collecting real-time structural performance data</li>
+<li><strong>Machine Learning Models</strong>: Analyzing sensor data to predict fatigue, degradation, and failure</li>
+<li><strong>Early Warning Systems</strong>: AI-powered alerts for structural anomalies</li>
+</ul>
+<h3 id="442-digital-twins">4.4.2 Digital Twins</h3>
+<ul>
+<li><strong>Virtual Models</strong>: Real-time digital replicas of physical structures</li>
+<li><strong>Predictive Maintenance</strong>: Using digital twins to simulate aging and predict maintenance needs</li>
+<li><strong>Design Optimization</strong>: Generative design exploring optimal structural configurations</li>
+</ul>
+<h3 id="443-generative-design">4.4.3 Generative Design</h3>
+<ul>
+<li><strong>Topology Optimization</strong>: AI algorithms finding optimal material distribution</li>
+<li><strong>Parametric Modeling</strong>: Automated generation of structural design alternatives</li>
+</ul>
+<hr />
+<h2 id="45-environmental-engineering-sustainability-driven-ai">4.5 Environmental Engineering: Sustainability-Driven AI</h2>
+<p>Environmental Engineering (7.60%) applies AI primarily to:</p>
+<h3 id="451-energy-efficiency">4.5.1 Energy Efficiency</h3>
+<ul>
+<li><strong>Building Energy Optimization</strong>: AI models optimizing HVAC systems, lighting, and insulation</li>
+<li><strong>Smart Grid Integration</strong>: AI managing renewable energy distribution</li>
+<li><strong>Carbon Footprint Reduction</strong>: Predictive models for emissions reduction</li>
+</ul>
+<h3 id="452-waste-management">4.5.2 Waste Management</h3>
+<ul>
+<li><strong>Recycling Optimization</strong>: Computer vision for automated waste sorting</li>
+<li><strong>Predictive Waste Collection</strong>: AI optimizing garbage collection routes and schedules</li>
+</ul>
+<h3 id="453-green-building-design">4.5.3 Green Building Design</h3>
+<ul>
+<li><strong>LEED Compliance</strong>: AI-assisted sustainable design</li>
+<li><strong>Lifecycle Assessment</strong>: Machine learning evaluating environmental impacts</li>
+</ul>
+<hr />
+<h2 id="46-geotechnical-engineering-the-ai-frontier">4.6 Geotechnical Engineering: The AI Frontier</h2>
+<p>Geotechnical Engineering's minimal representation (0.80%, only 6 articles) is noteworthy:</p>
+<h3 id="possible-reasons-for-low-adoption">Possible Reasons for Low Adoption:</h3>
+<ol>
+<li><strong>Data Scarcity</strong>: Geotechnical work often involves one-off site investigations with limited historical data</li>
+<li><strong>Complexity</strong>: Soil behavior is highly variable and location-specific, making machine learning challenging</li>
+<li><strong>Regulatory Conservatism</strong>: Geotechnical engineering has strict safety margins, limiting AI experimentation</li>
+<li><strong>Research Focus</strong>: Academic research may not translate to industry news coverage</li>
+</ol>
+<h3 id="emerging-applications">Emerging Applications:</h3>
+<ul>
+<li><strong>Soil Classification</strong>: Machine learning from borehole data</li>
+<li><strong>Slope Stability Prediction</strong>: AI models predicting landslide risk</li>
+<li><strong>Foundation Design Optimization</strong>: Generative design for foundation systems</li>
+</ul>
+<p><strong>This gap represents a significant opportunity</strong> for future AI research and application in Civil Engineering.</p>
+<hr />
+<h1 id="visualizations">Visualizations</h1>
+<h2 id="51-bar-chart-articles-per-civil-engineering-area">5.1 Bar Chart: Articles per Civil Engineering Area</h2>
+<p><img alt="Bar Chart: Articles per Civil Engineering Area" src="../Outputs/AfterLLM/BarChart_CE_Distribution.png" /></p>
+<p><em>Figure 1: Volume of AI Research by Civil Engineering Area</em></p>
+<p>This visualization clearly shows Construction Management's dominance, with Transportation, Structural, and Environmental Engineering forming a secondary tier, and Geotechnical Engineering as a clear outlier with minimal representation.</p>
+<p><strong>Key Takeaway:</strong> The visualization reinforces the quantitative finding that Construction Management is the primary focus of AI integration in Civil Engineering.</p>
+<hr />
+<h2 id="52-heatmap-ce-areas-ai-technologies-co-occurrence">5.2 Heatmap: CE Areas × AI Technologies Co-occurrence</h2>
+<p><img alt="Heatmap: CE Areas vs AI Technologies" src="../Outputs/AfterLLM/Task3_Heatmap.png" /></p>
+<p><em>Figure 2: Co-occurrence Matrix - Civil Engineering Areas × AI Technologies</em></p>
+<p>The heatmap matrix shows the frequency of co-occurrence between each Civil Engineering area and each AI technology. Darker cells indicate stronger associations.</p>
+<p><strong>Key Patterns Visible:</strong>
+- Construction Management shows strong associations with all AI technologies (dark cells across the row)
+- Computer Vision + Construction Management: Highest intensity
+- Transportation + Robotics/Automation: Strong pairing
+- Structural + Machine Learning: Moderate to high association
+- Geotechnical row: Mostly light (low counts across all technologies)</p>
+<hr />
+<h2 id="53-network-graph-term-relationships">5.3 Network Graph: Term Relationships</h2>
+<p><img alt="Network Graph: Term Relationships" src="../Outputs/AfterLLM/NetworkGraph_Terms.png" /></p>
+<p><em>Figure 3: Network Graph - CE Areas and Associated AI Keywords</em></p>
+<p>The network graph visualizes semantic relationships between terms, showing:
+- Central nodes representing major CE disciplines
+- Connected nodes representing associated keywords and concepts
+- Edge weights/thickness indicating relationship strength</p>
+<p><strong>Observable Clusters:</strong>
+- Construction Management cluster: Connected to "safety", "monitoring", "digital", "bim"
+- Transportation cluster: Linked to "autonomous", "traffic", "smart"
+- Structural cluster: Associated with "monitoring", "health", "digital twin"</p>
+<hr />
+<h2 id="54-word-clouds-discipline-specific-trends">5.4 Word Clouds: Discipline-Specific Trends</h2>
+<p>Each word cloud visualizes the most frequent terms within articles tagged to a specific discipline, providing intuitive insight into key themes:</p>
+<h3 id="construction-management">Construction Management</h3>
+<p><img alt="Word Cloud: Construction Management" src="../Outputs/AfterLLM/WordCloud_Construction_Management.png" /></p>
+<p><em>Figure 4a: Word Cloud - AI in Construction Management</em></p>
+<p><strong>Prominent terms:</strong> "safety", "site", "monitoring", "digital", "construction", "management", "bim"</p>
+<h3 id="transportation">Transportation</h3>
+<p><img alt="Word Cloud: Transportation" src="../Outputs/AfterLLM/WordCloud_Transportation.png" /></p>
+<p><em>Figure 4b: Word Cloud - AI in Transportation</em></p>
+<p><strong>Prominent terms:</strong> "traffic", "highway", "autonomous", "infrastructure", "transportation", "smart"</p>
+<h3 id="structural-engineering">Structural Engineering</h3>
+<p><img alt="Word Cloud: Structural Engineering" src="../Outputs/AfterLLM/WordCloud_Structural.png" /></p>
+<p><em>Figure 4c: Word Cloud - AI in Structural Engineering</em></p>
+<p><strong>Prominent terms:</strong> "structural", "monitoring", "health", "bridge", "design", "digital twin"</p>
+<h3 id="environmental-engineering">Environmental Engineering</h3>
+<p><img alt="Word Cloud: Environmental Engineering" src="../Outputs/AfterLLM/WordCloud_Environmental_Engineering.png" /></p>
+<p><em>Figure 4d: Word Cloud - AI in Environmental Engineering</em></p>
+<p><strong>Prominent terms:</strong> "energy", "sustainability", "green", "building", "carbon", "efficiency"</p>
+<h3 id="geotechnical-engineering">Geotechnical Engineering</h3>
+<p><img alt="Word Cloud: Geotechnical Engineering" src="../Outputs/AfterLLM/WordCloud_Geotechnical.png" /></p>
+<p><em>Figure 4e: Word Cloud - AI in Geotechnical Engineering</em></p>
+<p><strong>Key observations:</strong> Sparse (reflecting low article count), but shows: "soil", "foundation", "geotechnical"</p>
+<hr />
+<h2 id="55-temporal-trends-visualization">5.5 Temporal Trends Visualization</h2>
+<p><img alt="Temporal Trends: CE Topics Over Time" src="../Outputs/AfterLLM/Task3_Temporal_Trends.png" /></p>
+<p><em>Figure 5: Temporal Trends - AI Mentions Across CE Disciplines Over Time</em></p>
+<p>Line plot showing the evolution of AI mentions across Civil Engineering disciplines over time.</p>
+<p><strong>Observable Trends:</strong>
+- Upward trajectory for all disciplines (indicating growing AI interest)
+- Construction Management shows the steepest growth
+- Transportation demonstrates steady, consistent growth
+- Structural maintains moderate, stable presence</p>
+<hr />
+<h1 id="conclusion-future-outlook">Conclusion &amp; Future Outlook</h1>
+<h2 id="61-summary-of-findings">6.1 Summary of Findings</h2>
+<p>This study analyzed 750 articles to assess AI adoption across Civil Engineering sub-disciplines. Key conclusions:</p>
+<ol>
+<li>
+<p><strong>Construction Management is the AI adoption leader</strong> (70.27% of content), driven by data-rich environments, safety imperatives, and digital transformation initiatives.</p>
+</li>
+<li>
+<p><strong>Computer Vision and Predictive Analytics</strong> are the dominant AI technologies, particularly for site safety monitoring and risk assessment.</p>
+</li>
+<li>
+<p><strong>Transportation Engineering</strong> is a strong second (12.13%), focusing on autonomous infrastructure and smart highway systems.</p>
+</li>
+<li>
+<p><strong>Geotechnical Engineering</strong> shows minimal AI adoption (0.80%), representing a significant research and application gap.</p>
+</li>
+<li>
+<p><strong>Machine Learning (general)</strong> is the most frequently cited AI technology (323 mentions), indicating broad application across disciplines.</p>
+</li>
+</ol>
+<hr />
+<h2 id="62-implications-for-the-industry">6.2 Implications for the Industry</h2>
+<h3 id="for-practitioners">For Practitioners:</h3>
+<ul>
+<li><strong>Construction Management</strong>: Continue investing in Computer Vision for safety and Predictive Analytics for cost/schedule optimization</li>
+<li><strong>Transportation</strong>: Prepare for autonomous infrastructure and smart city integration</li>
+<li><strong>Structural</strong>: Explore Digital Twin and SHM applications for predictive maintenance</li>
+<li><strong>Environmental</strong>: Leverage AI for energy efficiency and sustainability goals</li>
+<li><strong>Geotechnical</strong>: Significant opportunity for AI innovation, particularly in data-driven soil analysis</li>
+</ul>
+<h3 id="for-researchers">For Researchers:</h3>
+<ul>
+<li><strong>Address the Geotechnical Gap</strong>: Develop AI applications for soil analysis, foundation design, and slope stability</li>
+<li><strong>Deepen Digital Twin Research</strong>: Expand beyond Structural to other disciplines</li>
+<li><strong>Improve Data Collection</strong>: Standardize data formats to enable better machine learning models</li>
+<li><strong>Focus on Explainability</strong>: Develop interpretable AI models for safety-critical applications</li>
+</ul>
+<hr />
+<h2 id="63-limitations">6.3 Limitations</h2>
+<ol>
+<li><strong>Data Source Bias</strong>: Industry news may over-represent commercial applications vs. academic research</li>
+<li><strong>Keyword-Based Classification</strong>: Dictionary-based approach may miss nuanced categorizations</li>
+<li><strong>Temporal Coverage</strong>: Publication dates vary across sources, limiting temporal analysis</li>
+<li><strong>Language</strong>: Analysis limited to English-language sources</li>
+<li><strong>Sample Size</strong>: While 750 articles exceeds the minimum requirement, some categories (e.g., Geotechnical) have very small samples</li>
+</ol>
+<hr />
+<h2 id="64-future-research-directions">6.4 Future Research Directions</h2>
+<ol>
+<li><strong>Longitudinal Analysis</strong>: Track AI adoption trends year-over-year as generative AI tools mature</li>
+<li><strong>Cross-Disciplinary Analysis</strong>: Examine how AI applications transfer between CE sub-disciplines</li>
+<li><strong>Geotechnical AI Development</strong>: Targeted research initiative to develop and document Geotechnical AI applications</li>
+<li><strong>Qualitative Case Studies</strong>: Deep-dive analysis of specific AI implementations (success stories and failures)</li>
+<li><strong>Cost-Benefit Analysis</strong>: Quantify ROI of AI implementations across different applications</li>
+<li><strong>Regulatory Impact Study</strong>: Analyze how AI regulations affect adoption rates across disciplines</li>
+</ol>
+<hr />
+<h2 id="65-final-thoughts">6.5 Final Thoughts</h2>
+<p>The Civil Engineering industry is experiencing a digital transformation, with AI serving as a key enabler. While Construction Management currently leads in adoption, there are significant opportunities across all sub-disciplines. The low representation of Geotechnical Engineering suggests both a challenge and an opportunity for future innovation.</p>
+<p>As AI technologies mature—particularly generative AI and large language models—we expect to see:
+- <strong>Democratization</strong>: Easier access to AI tools for smaller firms
+- <strong>Integration</strong>: Seamless AI integration into existing software (e.g., BIM, CAD)
+- <strong>Standardization</strong>: Industry-wide standards for AI data formats and model validation</p>
+<p>This analysis provides a baseline for measuring future AI adoption velocity and identifying emerging trends in Civil Engineering innovation.</p>
+<hr />
+<h1 id="references">References</h1>
+<h2 id="data-sources_1">Data Sources</h2>
+<ol>
+<li><strong>RSS Feeds:</strong></li>
+<li>Engineering News-Record (ENR): https://www.enr.com/rss</li>
+<li>Construction Dive: https://www.constructiondive.com/feeds/news/</li>
+<li>BIMplus: https://www.bimplus.co.uk/feed/</li>
+<li>New Civil Engineer: https://www.newcivilengineer.com/feed/</li>
+<li>
+<p>AEC Magazine: https://www.aecmag.com/feed/</p>
+</li>
+<li>
+<p><strong>Scientific Publications:</strong></p>
+</li>
+<li>arXiv API: http://export.arxiv.org/api/query</li>
+<li>
+<p>Categories: cs.AI, cs.CV, cs.LG (Computer Science - Artificial Intelligence, Computer Vision, Machine Learning)</p>
+</li>
+<li>
+<p><strong>Google News:</strong></p>
+</li>
+<li>GoogleNews Python Library</li>
+<li>Custom RSS queries via Google News RSS feeds</li>
+</ol>
+<h2 id="libraries-tools">Libraries &amp; Tools</h2>
+<ol>
+<li><strong>Web Scraping:</strong></li>
+<li><code>feedparser</code>: RSS feed parsing</li>
+<li><code>newspaper3k</code>: Article text extraction</li>
+<li>
+<p><code>GoogleNews</code>: News aggregation</p>
+</li>
+<li>
+<p><strong>NLP &amp; Text Processing:</strong></p>
+</li>
+<li><code>nltk</code>: Natural Language Toolkit (tokenization, stopwords, lemmatization)</li>
+<li><code>scikit-learn</code>: TF-IDF vectorization, CountVectorizer</li>
+<li><code>pandas</code>: Data manipulation</li>
+<li>
+<p><code>numpy</code>: Numerical operations</p>
+</li>
+<li>
+<p><strong>Visualization:</strong></p>
+</li>
+<li><code>matplotlib</code>: Plotting and figure generation</li>
+<li><code>seaborn</code>: Statistical visualization (heatmaps)</li>
+<li><code>networkx</code>: Network/graph visualization</li>
+<li>
+<p><code>wordcloud</code>: Word cloud generation</p>
+</li>
+<li>
+<p><strong>AI/LLM:</strong></p>
+</li>
+<li>
+<p><code>google-generativeai</code>: Google Gemini 3 Flash API for semantic validation</p>
+</li>
+<li>
+<p><strong>Database:</strong></p>
+</li>
+<li><code>sqlite3</code>: SQLite database management</li>
+</ol>
+<h2 id="academic-industry-references">Academic &amp; Industry References</h2>
+<p><em>Note: This section would typically include citations from the articles analyzed. For a comprehensive report, specific articles from the dataset could be cited here. The following are general references relevant to the domain.</em></p>
+<ol>
+<li>Building Information Modeling (BIM) and Digital Twins in Construction</li>
+<li>Computer Vision Applications in Construction Safety (OSHA-related research)</li>
+<li>Machine Learning in Structural Health Monitoring</li>
+<li>Autonomous Vehicle Infrastructure and Smart Cities</li>
+<li>Predictive Analytics in Project Management</li>
+<li>Generative Design and Topology Optimization</li>
+<li>AI in Geotechnical Engineering (limited literature)</li>
+</ol>
+<h2 id="methodological-references">Methodological References</h2>
+<ol>
+<li>Jurafsky, D., &amp; Martin, J. H. (2020). <em>Speech and Language Processing</em> (3rd ed.). Stanford University.</li>
+<li>Bird, S., Klein, E., &amp; Loper, E. (2009). <em>Natural Language Processing with Python</em>. O'Reilly Media.</li>
+<li>Aggarwal, C. C. (2018). <em>Machine Learning for Text</em>. Springer.</li>
+</ol>
+<hr />
+<h2 id="appendix-technical-implementation-details">Appendix: Technical Implementation Details</h2>
+<h3 id="database-schema">Database Schema</h3>
+<p><strong>Table: articles</strong>
+- <code>id</code>: INTEGER PRIMARY KEY
+- <code>title</code>: TEXT
+- <code>publication_date</code>: TEXT
+- <code>source_domain</code>: TEXT
+- <code>url</code>: TEXT UNIQUE
+- <code>full_text</code>: TEXT
+- <code>search_keywords</code>: TEXT
+- <code>category_tag</code>: TEXT</p>
+<p><strong>Table: articles_labeled</strong> (After LLM Processing)
+- All columns from <code>articles</code> plus:
+- <code>CE_topic</code>: TEXT (Structural, Geotechnical, Transportation, Construction Management, Environmental Engineering)
+- <code>AI_topic</code>: TEXT (Computer Vision, Predictive Analytics, Generative Design, Robotics/Automation, Machine Learning)</p>
+<h3 id="code-repository-structure">Code Repository Structure</h3>
+<pre><code>/CE49X Final Project
+├── /Data/
+│   ├── corpus.db (raw data)
+│   ├── corpus_pandas_cleaned.db
+│   └── corpus_LLM_Improved.db (final labeled dataset)
+├── /Scripts/
+│   ├── scraper_rss.py
+│   ├── scraper_gnews.py
+│   ├── scraper_arxiv.py
+│   ├── task2_preprocessing.py
+│   ├── task3_categorization.py
+│   ├── task4_visuals.py
+│   └── llm_cleanup_final-detailed.py
+└── /Outputs/
+    ├── Task2_Analysis_Report.txt
+    ├── Task3_Distribution_Report.txt
+    ├── Task3_Heatmap.png
+    ├── BarChart_CE_Distribution.png
+    ├── NetworkGraph_Terms.png
+    └── WordCloud_*.png (5 files)
+</code></pre>
+<hr />
+<p><strong>End of Report</strong></p>
+    
+    <div class="footer">
+        <p>CE49X Final Project - Civil Engineering & AI Integration: Analyzing Industry Trends through News & Media</p>
+        <p>Boğaziçi University, Fall 2025 | Team: Hakan ARMAN, İbrahim ÇAYIR</p>
+        <p>Generated: December 28, 2025</p>
+    </div>
+</body>
+</html>
